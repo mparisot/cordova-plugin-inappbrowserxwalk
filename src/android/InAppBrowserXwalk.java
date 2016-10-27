@@ -1,6 +1,6 @@
 package com.shoety.plugin;
 
-import com.shoety.plugin.BrowserDialog;
+import com.example.plugin.InAppBrowserXwalk.BrowserDialog;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
