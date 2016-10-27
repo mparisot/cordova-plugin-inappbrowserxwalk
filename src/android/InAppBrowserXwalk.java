@@ -20,7 +20,7 @@ import org.xwalk.core.XWalkView;
 import org.xwalk.core.XWalkResourceClient;
 import org.xwalk.core.XWalkPreferences;
 import org.xwalk.core.internal.XWalkViewInternal;
-import org.xwalk.core.internal.XWalkCookieManager;
+import org.xwalk.core.XWalkCookieManager;
 import org.crosswalk.engine.XWalkCordovaUiClient;
 import org.crosswalk.engine.XWalkCordovaView;
 import org.crosswalk.engine.XWalkWebViewEngine;
