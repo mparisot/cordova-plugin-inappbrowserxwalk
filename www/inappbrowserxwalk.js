@@ -1,10 +1,10 @@
 /*global cordova, module*/
 
 function InAppBrowserXwalk() {
- 
+
 }
 
-var callbacks = new Array ();
+var callbacks = new Array();
 
 InAppBrowserXwalk.prototype = {
     close: function () {
@@ -21,10 +21,16 @@ InAppBrowserXwalk.prototype = {
     },
     hide: function () {
         cordova.exec(null, null, "InAppBrowserXwalk", "hide", []);
+    },
+    stopLoading: function (scrpt) {
+        cordova.exec(null, null, "InAppBrowserXwalk", "stopLoading", []);
+    },
+    executeScript: function (scrpt) {
+        cordova.exec(null, null, "InAppBrowserXwalk", "executeScript", [scrpt]);
     }
 }
 
-var callback = function(event) {
+var callback = function (event) {
     if (event.type === "loadstart" && callbacks['loadstart'] !== undefined) {
         callbacks['loadstart'](event.url);
     }
@@ -33,6 +39,9 @@ var callback = function(event) {
     }
     if (event.type === "exit" && callbacks['exit'] !== undefined) {
         callbacks['exit']();
+    }
+    if (event.type === "jsCallback" && callbacks['jsCallback'] !== undefined) {
+        callbacks['jsCallback'](event.result);
     }
 }
 
