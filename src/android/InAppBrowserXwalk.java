@@ -1,4 +1,4 @@
-package com.shoety.plugin;
+package com.example.plugin.InAppBrowserXwalk;
 
 import com.example.plugin.InAppBrowserXwalk.BrowserDialog;
 
